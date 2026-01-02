@@ -1,6 +1,9 @@
 🔰 Yocto First Hands-On (Beginner → Confident)
+
 0️⃣ Host Setup (One-Time)
+
 sudo apt update
+
 sudo apt install -y \
   gawk wget git diffstat unzip texinfo gcc \
   build-essential chrpath socat cpio python3 \
@@ -22,8 +25,8 @@ cd ~/yocto
 👉 Use LTS branch (recommended)
 
 git clone -b kirkstone https://git.yoctoproject.org/poky.git
-cd poky
 
+cd poky
 
 Check branch:
 
