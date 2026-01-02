@@ -1,30 +1,3 @@
-# Embedded Systems Overview
-
-## What is an Embedded System?
-
-An **embedded system** is a combination of hardware and software designed to perform a **specific task**.  
-Key characteristics:
-
-- Equipped with a processing unit.
-- Includes temporary memory and permanent storage.
-- Part of a larger system.
-- Customized for specific functionality.
-- Lower cost compared to general-purpose systems.
-
-Each component in such a system can be considered an embedded system when it has its own processor and memory.
-
----
-
-#  Kernel Configuration: `make menuconfig` vs. Yocto Approach
-
-When working with Linux kernel customization for embedded systems, there are two main ways to configure the kernel:
-
----
-
-## . `make menuconfig` — Traditional Kernel Configuration
-
-This is the **standard method** used when you're working directly with the Linux kernel source **outside** of Yocto.
-
 #  What is Yocto Project?
 
 The **Yocto Project** is an open-source collaboration project that helps developers **create custom Linux distributions** for embedded systems, regardless of the hardware architecture (e.g., ARM, x86).
@@ -83,32 +56,6 @@ Here are the major kernel aspects you can customize:
 - Customize init scripts to boot directly into your application.
 
 ---
-
-#  Desktop Kernel vs  Embedded Kernel
-
-Understanding the difference between a desktop and embedded Linux kernel helps in making design decisions based on system requirements.
-
----
-
-##  Key Differences
-
-| Feature / Attribute            |  Desktop Kernel                          |   Embedded Kernel                         |
-|-------------------------------|-------------------------------------------|--------------------------------------------|
-| **Purpose**                   | General-purpose (laptops, PCs, servers)   | Application-specific (IoT, industrial, etc.)|
-| **Size**                      | Large (many modules & drivers)            | Small, optimized for specific hardware     |
-| **Drivers**                   | Includes support for a wide range         | Only includes required drivers             |
-| **User Interface**            | Supports full GUI environments            | Often headless or minimal UI               |
-| **Boot Time**                 | Not a priority (20–60 seconds)            | Critical (needs fast boot: < 5 seconds)    |
-| **Memory Usage**              | Assumes large RAM (GBs)                   | Optimized for low RAM (MBs)                |
-| **Filesystem**                | ext4, btrfs, xfs                          | squashfs, ubifs, jffs2, cramfs             |
-| **Init System**               | systemd, upstart                          | busybox init, systemd (minimal), SysVinit  |
-| **Security Model**            | Multi-user, complex permissions           | Often single-user or sandboxed application |
-| **Update Mechanism**          | Package manager (apt, rpm)                | Image-based (OTA) or atomic updates        |
-| **Real-Time Support**         | Optional, not default                     | Frequently patched with PREEMPT-RT         |
-| **Build Process**             | Binary packages (Ubuntu, Fedora, etc.)    | Custom-built using Yocto, Buildroot        |
-
----
-
 
 #  How Linux Boots (Boot Process Overview)
 
