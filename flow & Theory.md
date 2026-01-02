@@ -1,4 +1,17 @@
-# key words
+## What is Yocto?
+
+Yocto Project is an open-source build system used to create custom embedded Linux distributions for specific hardware (SoCs/boards).
+
+**Why Yocto is required**
+
+| Problem         | Without Yocto | With Yocto   |
+| --------------- | ------------- | ------------ |
+| OS size         | Huge          | Minimal      |
+| Boot time       | Uncontrolled  | Optimized    |
+| BSP integration | Manual        | Layer-based  |
+| Rebuilds        | Painful       | Reproducible |
+| Product scaling | Hard          | Easy         |
+
 
 ## What is Poky?
 - Poky is the reference distribution of the Yocto Project.
